@@ -19,6 +19,10 @@ in
       inotify-tools
       # Locales
       glibcLocales
+      # For mix_audit, which runs in the continuous integration - https://github.com/mirego/mix_audit
+      git
+      # Install certificates to prevent SSL errors
+      cacert
     ];
 
     shellHook = ''
