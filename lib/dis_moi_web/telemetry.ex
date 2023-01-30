@@ -1,4 +1,7 @@
 defmodule DisMoiWeb.Telemetry do
+  @moduledoc """
+  https://hexdocs.pm/phoenix/telemetry.html
+  """
   use Supervisor
   import Telemetry.Metrics
 

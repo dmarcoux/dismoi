@@ -1,4 +1,5 @@
 defmodule DisMoiWeb.ErrorHTML do
+  @moduledoc false
   use DisMoiWeb, :html
 
   # If you want to customize your error pages,
