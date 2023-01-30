@@ -9,3 +9,6 @@ package manager.
 ### Usage
 
 1. Start with `nix-shell --pure`
+2. Run `mix setup` to install and setup dependencies
+3. Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+4. Visit [`localhost:4000`](http://localhost:4000) from your browser.
