@@ -27,6 +27,23 @@ The first deployment was done with `flyctl launch`, then the following ones with
 the [continuous delivery](./.github/workflows/continuous-delivery.yml) whenever
 code is pushed to the `main` branch.
 
+### Secrets
+
 The secret `FLY_API_TOKEN` was created under the
 [settings](https://github.com/dmarcoux/dismoi/settings/secrets/actions) of this
 GitHub repository and it contains the output of `flyctl auth token`.
+
+### DNS
+
+The DNS settings are on Cloudflare.
+
+A and AAAA records with the name `dismoi` were created on my domain for the IP
+addresses listed by `flyctl ips list`. Those records are proxied, so there must
+also be a CNAME record for the certificate to be correctly issued. This CNAME
+record was created with the name `_acme-challenge.dismoi` and its value is
+displayed on the certificates page of my [Fly.io
+dashboard](https://fly.io/apps/dismoi/certificates/dismoi.dmarcoux.com).
+
+Make sure that the SSL/TLS encryption mode is _Full_, this can be done under the
+SSL/TLS settings of my domain in the Cloudflare UI. This is needed to prevent
+HTTP 520 errors.
