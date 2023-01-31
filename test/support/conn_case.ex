@@ -1,4 +1,4 @@
-defmodule DisMoiWeb.ConnCase do
+defmodule DismoiWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule DisMoiWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use DisMoiWeb.ConnCase, async: true`, although
+  by setting `use DismoiWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,14 +20,14 @@ defmodule DisMoiWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint DisMoiWeb.Endpoint
+      @endpoint DismoiWeb.Endpoint
 
-      use DisMoiWeb, :verified_routes
+      use DismoiWeb, :verified_routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import DisMoiWeb.ConnCase
+      import DismoiWeb.ConnCase
     end
   end
 

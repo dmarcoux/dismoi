@@ -1,4 +1,4 @@
-defmodule DisMoiWeb.Telemetry do
+defmodule DismoiWeb.Telemetry do
   @moduledoc """
   https://hexdocs.pm/phoenix/telemetry.html
   """
@@ -66,7 +66,7 @@ defmodule DisMoiWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {DisMoiWeb, :count_users, []}
+      # {DismoiWeb, :count_users, []}
     ]
   end
 end

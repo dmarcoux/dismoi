@@ -1,4 +1,4 @@
-# <a href="https://github.com/dmarcoux/dis_moi">dmarcoux/dis_moi</a>
+# <a href="https://github.com/dmarcoux/dismoi">dmarcoux/dismoi</a>
 
 ## Development Environment with nix-shell
 

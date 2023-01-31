@@ -1,12 +1,12 @@
-defmodule DisMoiWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :dis_moi
+defmodule DismoiWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :dismoi
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_dis_moi_key",
+    key: "_dismoi_key",
     signing_salt: "duVKDWwT",
     same_site: "Lax"
   ]
@@ -19,9 +19,9 @@ defmodule DisMoiWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :dis_moi,
+    from: :dismoi,
     gzip: false,
-    only: DisMoiWeb.static_paths()
+    only: DismoiWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -46,5 +46,5 @@ defmodule DisMoiWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug DisMoiWeb.Router
+  plug DismoiWeb.Router
 end

@@ -1,6 +1,6 @@
-defmodule DisMoiWeb.Layouts do
+defmodule DismoiWeb.Layouts do
   @moduledoc false
-  use DisMoiWeb, :html
+  use DismoiWeb, :html
 
   embed_templates "layouts/*"
 end

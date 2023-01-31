@@ -1,5 +1,5 @@
-defmodule DisMoiWeb.PageControllerTest do
-  use DisMoiWeb.ConnCase
+defmodule DismoiWeb.PageControllerTest do
+  use DismoiWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

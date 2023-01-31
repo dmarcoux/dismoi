@@ -1,13 +1,13 @@
-defmodule DisMoiWeb.ErrorHTML do
+defmodule DismoiWeb.ErrorHTML do
   @moduledoc false
-  use DisMoiWeb, :html
+  use DismoiWeb, :html
 
   # If you want to customize your error pages,
   # uncomment the embed_templates/1 call below
   # and add pages to the error directory:
   #
-  #   * lib/dis_moi_web/controllers/error_html/404.html.heex
-  #   * lib/dis_moi_web/controllers/error_html/500.html.heex
+  #   * lib/dismoi_web/controllers/error_html/404.html.heex
+  #   * lib/dismoi_web/controllers/error_html/500.html.heex
   #
   # embed_templates "error_html/*"
 

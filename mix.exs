@@ -1,9 +1,9 @@
-defmodule DisMoi.MixProject do
+defmodule Dismoi.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :dis_moi,
+      app: :dismoi,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule DisMoi.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {DisMoi.Application, []},
+      mod: {Dismoi.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

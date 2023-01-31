@@ -1,12 +1,12 @@
-defmodule DisMoiWeb do
+defmodule DismoiWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use DisMoiWeb, :controller
-      use DisMoiWeb, :html
+      use DismoiWeb, :controller
+      use DismoiWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule DisMoiWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: DisMoiWeb.Layouts]
+        layouts: [html: DismoiWeb.Layouts]
 
       import Plug.Conn
-      import DisMoiWeb.Gettext
+      import DismoiWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule DisMoiWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {DisMoiWeb.Layouts, :app}
+        layout: {DismoiWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule DisMoiWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import DisMoiWeb.CoreComponents
-      import DisMoiWeb.Gettext
+      import DismoiWeb.CoreComponents
+      import DismoiWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule DisMoiWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: DisMoiWeb.Endpoint,
-        router: DisMoiWeb.Router,
-        statics: DisMoiWeb.static_paths()
+        endpoint: DismoiWeb.Endpoint,
+        router: DismoiWeb.Router,
+        statics: DismoiWeb.static_paths()
     end
   end
 

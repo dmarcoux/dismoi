@@ -1,6 +1,6 @@
-defmodule DisMoiWeb.PageHTML do
+defmodule DismoiWeb.PageHTML do
   @moduledoc false
-  use DisMoiWeb, :html
+  use DismoiWeb, :html
 
   embed_templates "page_html/*"
 end

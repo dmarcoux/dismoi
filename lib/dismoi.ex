@@ -1,6 +1,6 @@
-defmodule DisMoi do
+defmodule Dismoi do
   @moduledoc """
-  DisMoi keeps the contexts that define your domain
+  Dismoi keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

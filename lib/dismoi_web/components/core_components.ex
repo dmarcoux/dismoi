@@ -1,4 +1,4 @@
-defmodule DisMoiWeb.CoreComponents do
+defmodule DismoiWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -12,7 +12,7 @@ defmodule DisMoiWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import DisMoiWeb.Gettext
+  import DismoiWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -614,9 +614,9 @@ defmodule DisMoiWeb.CoreComponents do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(DisMoiWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(DismoiWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(DisMoiWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(DismoiWeb.Gettext, "errors", msg, opts)
     end
   end
 

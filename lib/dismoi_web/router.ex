@@ -1,11 +1,11 @@
-defmodule DisMoiWeb.Router do
-  use DisMoiWeb, :router
+defmodule DismoiWeb.Router do
+  use DismoiWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {DisMoiWeb.Layouts, :root}
+    plug :put_root_layout, {DismoiWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,19 +14,19 @@ defmodule DisMoiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", DisMoiWeb do
+  scope "/", DismoiWeb do
     pipe_through :browser
 
     get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DisMoiWeb do
+  # scope "/api", DismoiWeb do
   #   pipe_through :api
   # end
 
   # Enable LiveDashboard in development
-  if Application.compile_env(:dis_moi, :dev_routes) do
+  if Application.compile_env(:dismoi, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
     # If your application does not have an admins-only section yet,
@@ -37,7 +37,7 @@ defmodule DisMoiWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: DisMoiWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DismoiWeb.Telemetry
     end
   end
 end

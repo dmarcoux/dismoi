@@ -1,5 +1,5 @@
-defmodule DisMoiWeb.PageController do
-  use DisMoiWeb, :controller
+defmodule DismoiWeb.PageController do
+  use DismoiWeb, :controller
 
   def home(conn, _params) do
     # The home page is often custom made,

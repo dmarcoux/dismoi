@@ -8,13 +8,13 @@
 import Config
 
 # Configures the endpoint
-config :dis_moi, DisMoiWeb.Endpoint,
+config :dismoi, DismoiWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: DisMoiWeb.ErrorHTML, json: DisMoiWeb.ErrorJSON],
+    formats: [html: DismoiWeb.ErrorHTML, json: DismoiWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: DisMoi.PubSub,
+  pubsub_server: Dismoi.PubSub,
   live_view: [signing_salt: "Qpga2HYp"]
 
 # Configure esbuild (the version is required)

@@ -1,4 +1,4 @@
-defmodule DisMoi.Application do
+defmodule Dismoi.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,18 +9,18 @@ defmodule DisMoi.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      DisMoiWeb.Telemetry,
+      DismoiWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: DisMoi.PubSub},
+      {Phoenix.PubSub, name: Dismoi.PubSub},
       # Start the Endpoint (http/https)
-      DisMoiWeb.Endpoint
-      # Start a worker by calling: DisMoi.Worker.start_link(arg)
-      # {DisMoi.Worker, arg}
+      DismoiWeb.Endpoint
+      # Start a worker by calling: Dismoi.Worker.start_link(arg)
+      # {Dismoi.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: DisMoi.Supervisor]
+    opts = [strategy: :one_for_one, name: Dismoi.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -28,7 +28,7 @@ defmodule DisMoi.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    DisMoiWeb.Endpoint.config_change(changed, removed)
+    DismoiWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
