@@ -20,3 +20,13 @@ Linters, tests and more. Details under [.github/workflows](./.github/workflows).
 ## [Dependabot](https://dependabot.com/)
 
 Automated dependency updates. Details in the [config](./.github/dependabot.yml).
+
+## Production & Continuous Delivery
+
+The first deployment was done with `flyctl launch`, then the following ones with
+the [continuous delivery](./.github/workflows/continuous-delivery.yml) whenever
+code is pushed to the `main` branch.
+
+The secret `FLY_API_TOKEN` was created under the
+[settings](https://github.com/dmarcoux/dismoi/settings/secrets/actions) of this
+GitHub repository and it contains the output of `flyctl auth token`.

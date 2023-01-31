@@ -1,6 +1,6 @@
 # To ensure this nix-shell is reproducible, we pin the packages index to a commit SHA taken from a channel on https://status.nixos.org/
-# This commit is from NixOS 22.11
-with (import (fetchTarball https://github.com/NixOS/nixpkgs/archive/f413457e0dd7a42adefdbcea4391dd9751509025.tar.gz) {});
+# This commit is from nixpkgs-unstable, it's somewhere between NixOS 22.11 and the following version
+with (import (fetchTarball https://github.com/NixOS/nixpkgs/archive/e0fa1ece2f3929726c9b98c539ad14b63ae8e4fd.tar.gz) {});
 
 let
   # Define variables for packages which are referenced more than once in this nix-shell
@@ -23,6 +23,8 @@ in
       git
       # Install certificates to prevent SSL errors
       cacert
+      # To deploy on https://fly.io
+      flyctl
     ];
 
     shellHook = ''

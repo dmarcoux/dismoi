@@ -1,0 +1,25 @@
+name: Continuous delivery
+
+# Running on the branch main
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup wrapper for flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@67ddda2a87628f1aff28a54b8a708879ec62c80f
+
+      - name: Deploy to https://fly.io/
+        # `--remote-only` - Perform builds on a remote builder instance instead of using the local docker daemon
+        run: flyctl deploy --remote-only
