@@ -1,5 +1,7 @@
 # <a href="https://github.com/dmarcoux/dismoi">dmarcoux/dismoi</a>
 
+A personal dashboard for all information I need.
+
 ## Development Environment with nix-shell
 
 Reproducible development environment which relies on
