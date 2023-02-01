@@ -47,3 +47,16 @@ dashboard](https://fly.io/apps/dismoi/certificates/dismoi.dmarcoux.com).
 Make sure that the SSL/TLS encryption mode is _Full_, this can be done under the
 SSL/TLS settings of my domain in the Cloudflare UI. This is needed to prevent
 HTTP 520 errors.
+
+### Persistent Volume for SQLite3 Database
+
+On Fly.io, SQLite3 databases must be stored on [persistent
+volumes](https://fly.io/docs/elixir/advanced-guides/sqlite3/) to not be
+overwritten whenever a new deployment occurs.
+
+Create a persistent volume with:
+
+```bash
+# dismoi is the name of the volume
+fly volumes create dismoi
+```

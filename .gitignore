@@ -35,3 +35,7 @@ npm-debug.log
 # Mix and Hex from nix-shell
 .nix-mix/
 .nix-hex/
+
+# SQLite3 database files
+*.db
+*.db-*

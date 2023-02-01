@@ -49,3 +49,7 @@ erl_crash.dump
 # Mix and Hex from development environment in nix-shell
 .nix-mix/
 .nix-hex/
+
+# SQLite3 database files
+*.db
+*.db-*

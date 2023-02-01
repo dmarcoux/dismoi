@@ -7,6 +7,9 @@ defmodule Dismoi.Application do
 
   @impl true
   def start(_type, _args) do
+    # Run database migrations
+    Dismoi.Release.migrate()
+
     children = [
       # Start the Telemetry supervisor
       DismoiWeb.Telemetry,

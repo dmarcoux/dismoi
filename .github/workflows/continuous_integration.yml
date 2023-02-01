@@ -69,5 +69,8 @@ jobs:
         # `--private` is to prevent Sobelow from checking for updates, this is handled by Dependabot
         run: mix sobelow --private
 
+      - name: Verify database migrations and if they can fully rollback # https://hexdocs.pm/ecto_sql/Mix.Tasks.Ecto.Rollback.html
+        run: mix ecto.create && mix ecto.migrate && mix ecto.rollback --all
+
       - name: Run tests # https://hexdocs.pm/mix/Mix.Tasks.Test.html
         run: mix test

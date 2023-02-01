@@ -6,11 +6,17 @@ kill_timeout = 5
 processes = []
 
 [env]
+  DATABASE_PATH = "/mnt/dismoi/dismoi.db"
   PHX_HOST = "dismoi.fly.dev"
   PORT = "8080"
 
 [experimental]
   auto_rollback = true
+
+# For the SQLite3 database in a persistent volume
+[mounts]
+  source="dismoi"
+  destination="/mnt/dismoi"
 
 [[services]]
   http_checks = []
