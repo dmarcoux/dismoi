@@ -17,8 +17,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup wrapper for flyctl
+      - name: Setup wrapper for flyctl # https://github.com/superfly/flyctl-actions
         uses: superfly/flyctl-actions/setup-flyctl@67ddda2a87628f1aff28a54b8a708879ec62c80f
+        with:
+          version: 0.0.451 # See versions at https://github.com/superfly/flyctl
 
       - name: Deploy to https://fly.io/
         # `--remote-only` - Perform builds on a remote builder instance instead of using the local docker daemon
