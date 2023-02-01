@@ -1,5 +1,12 @@
 import Config
 
+# Configure your database
+config :dismoi, Dismoi.Repo,
+  database: Path.expand("../dismoi_dev.db", Path.dirname(__ENV__.file)),
+  pool_size: 5,
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -64,3 +71,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# Disable swoosh api client as it is only required for production adapters.
+config :swoosh, :api_client, false

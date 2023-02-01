@@ -10,8 +10,12 @@ defmodule Dismoi.Application do
     children = [
       # Start the Telemetry supervisor
       DismoiWeb.Telemetry,
+      # Start the Ecto repository
+      Dismoi.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: Dismoi.PubSub},
+      # Start Finch
+      {Finch, name: Dismoi.Finch},
       # Start the Endpoint (http/https)
       DismoiWeb.Endpoint
       # Start a worker by calling: Dismoi.Worker.start_link(arg)

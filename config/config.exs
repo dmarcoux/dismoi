@@ -7,6 +7,9 @@
 # General application configuration
 import Config
 
+config :dismoi,
+  ecto_repos: [Dismoi.Repo]
+
 # Configures the endpoint
 config :dismoi, DismoiWeb.Endpoint,
   url: [host: "localhost"],
@@ -16,6 +19,15 @@ config :dismoi, DismoiWeb.Endpoint,
   ],
   pubsub_server: Dismoi.PubSub,
   live_view: [signing_salt: "Qpga2HYp"]
+
+# Configures the mailer
+#
+# By default it uses the "Local" adapter which stores the emails
+# locally. You can see the emails in your browser, at "/dev/mailbox".
+#
+# For production it's recommended to configure a different adapter
+# at the `config/runtime.exs`.
+config :dismoi, Dismoi.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
