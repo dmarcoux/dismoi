@@ -21,8 +21,8 @@ defmodule DismoiWeb.UserSessionControllerTest do
       conn = get(conn, ~p"/")
       response = html_response(conn, 200)
       assert response =~ user.email
-      assert response =~ "Settings</a>"
-      assert response =~ "Log out</a>"
+      assert Regex.match?(~r{Settings\s*</a>}, response)
+      assert Regex.match?(~r{Log out\s*</a>}, response)
     end
 
     test "logs the user in with remember me", %{conn: conn, user: user} do
