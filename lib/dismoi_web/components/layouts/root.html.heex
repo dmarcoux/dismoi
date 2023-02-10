@@ -22,7 +22,8 @@
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
-                  <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
+                  <%# Current: class="bg-indigo-700", aria-current="page"
+                      Default: "hover:bg-indigo-500 hover:bg-opacity-75" %>
                   <a
                     href="#"
                     class="bg-indigo-700 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -64,7 +65,7 @@
               </ul>
             </div>
             <div class="-mr-2 flex md:hidden">
-              <!-- Mobile menu button -->
+              <%# Mobile menu button %>
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-md bg-indigo-600 p-2 text-indigo-200 hover:bg-indigo-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
@@ -72,11 +73,9 @@
                 aria-expanded="false"
               >
                 <span class="sr-only">Open main menu</span>
-                <!--
-                  Heroicon name: outline/bars-3
+                <%# Heroicon name: outline/bars-3
 
-                  Menu open: "hidden", Menu closed: "block"
-                -->
+                    Menu open: "hidden", Menu closed: "block" %>
                 <svg
                   class="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,11 +91,9 @@
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
-                <!--
-                  Heroicon name: outline/x-mark
+                <%# Heroicon name: outline/x-mark
 
-                  Menu open: "block", Menu closed: "hidden"
-                -->
+                    Menu open: "block", Menu closed: "hidden" %>
                 <svg
                   class="hidden h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,10 +109,11 @@
             </div>
           </div>
         </div>
-        <!-- Mobile menu, show/hide based on menu state. -->
+        <%# Mobile menu, show/hide based on menu state. %>
         <div class="md:hidden" id="mobile-menu">
           <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-            <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
+            <%# Current: class="bg-indigo-700", aria-current="page"
+                Default: "hover:bg-indigo-500 hover:bg-opacity-75" %>
             <a
               href="#"
               class="bg-indigo-700 text-white block px-3 py-2 rounded-md text-base font-medium"
