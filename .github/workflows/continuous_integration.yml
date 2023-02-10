@@ -1,11 +1,10 @@
 name: Continuous integration
 
-# Running on the branch main and on all PRs
 on:
-  push:
-    branches:
-      - main
+  # Running on all PRs
   pull_request:
+  # This workflow is reusable in other workflows
+  workflow_call:
 
 jobs:
   continuous_integration:

@@ -1,6 +1,6 @@
 name: Continuous delivery
 
-# Running on the branch main
+# Running on the `main` branch
 on:
   push:
     branches:
@@ -10,8 +10,12 @@ env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
+  continuous_integration:
+    uses: ./.github/workflows/continuous_integration.yml
   continuous_delivery:
     runs-on: ubuntu-22.04
+    needs:
+      - continuous_integration # The continuous integration must succeed before the continuous delivery starts
 
     steps:
       - name: Checkout code
